@@ -231,23 +231,25 @@ workflow-patterns-langgraph/
 │   ├── article_agent.py        # Writer agent
 │   ├── research_agent.py       # Research agent
 │   ├── review_agent.py         # Reviewer agent
-│   ├── supervisor_agent.py     # Supervisor decision-making agent
-│   ├── llm.py                  # Shared Groq LLM client
-│   └── state.py                # Shared AgentState (TypedDict)
+|   ├── llm.py                  # Shared Groq LLM client
+│   └── state.py
+│      # Supervisor decision-making agent
+│                   # Shared AgentState (TypedDict)
 │
 ├── sequential/
 │   └── app.py                  # Sequential workflow graph
-│
+│   └── graph.py
 ├── router/
 │   └── app.py                  # Router workflow graph
-│
+│   └── graph.py
 ├── parallelism/
 │   ├── splitter.py              # Task decomposition node
 │   └── app.py                   # Parallel workflow graph (Send + reducers)
-│
+│   └── graph.py
 ├── supervisor/
-│   └── app.py                  # Supervisor workflow graph (feedback loop)
-│
+│   └── app.py
+|   └── supervisor.py                  # Supervisor workflow graph (feedback loop)
+│   └── graph.py  
 ├── diagrams/
 │   └── *.png                    # Auto-generated mermaid graph images
 │
